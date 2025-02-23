@@ -3313,6 +3313,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3043113354486761642, guid: c5299addbd667b54a890dde3a7454050,
+        type: 3}
+      propertyPath: arrowPooler
+      value: 
+      objectReference: {fileID: 1114620681}
     - target: {fileID: 3223228116032834733, guid: c5299addbd667b54a890dde3a7454050,
         type: 3}
       propertyPath: m_IsActive
@@ -4620,6 +4625,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3043113354486761642, guid: c5299addbd667b54a890dde3a7454050,
+        type: 3}
+      propertyPath: arrowPooler
+      value: 
+      objectReference: {fileID: 1114620681}
     - target: {fileID: 3223228116032834733, guid: c5299addbd667b54a890dde3a7454050,
         type: 3}
       propertyPath: m_IsActive
@@ -10599,6 +10609,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3043113354486761642, guid: c5299addbd667b54a890dde3a7454050,
+        type: 3}
+      propertyPath: arrowPooler
+      value: 
+      objectReference: {fileID: 1114620681}
     - target: {fileID: 3223228116032834733, guid: c5299addbd667b54a890dde3a7454050,
         type: 3}
       propertyPath: m_IsActive
@@ -13871,6 +13886,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1113060534}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1114620680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1114620682}
+  - component: {fileID: 1114620681}
+  m_Layer: 0
+  m_Name: ArrowPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1114620681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114620680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9054140a8e4ff5f489d34da52448f136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 2227274138544148052, guid: 9f4fb076d83c52e48a06dfcbbf830b01,
+    type: 3}
+  size: 3
+--- !u!4 &1114620682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114620680}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1119213680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24147,6 +24209,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1114620682}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1142377051}

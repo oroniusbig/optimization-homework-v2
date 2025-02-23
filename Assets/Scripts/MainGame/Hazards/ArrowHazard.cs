@@ -1,10 +1,9 @@
-using System;
-using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class ArrowHazard : MonoBehaviour
 {
-    public GameObject arrowPrefab;
+    [SerializeField] private ArrowPooler arrowPooler;
     [SerializeField] float shootInterval;
     private float shootIntervalLeft;
     
@@ -21,8 +20,7 @@ public class ArrowHazard : MonoBehaviour
         shootIntervalLeft -= Time.deltaTime;
         if (shootIntervalLeft <= 0)
         {
-            //TODO: make object pooling
-            ArrowObject arrow = Instantiate(arrowPrefab,transform.position,Quaternion.identity).GetComponent<ArrowObject>();
+            GameObject arrow = arrowPooler.SpawnFromPool(transform.position, quaternion.identity);
             arrow.transform.Rotate(0, 180, 0); //redundant double 90 degree rotation changed it to only one of 180 degrees
             shootIntervalLeft = shootInterval;
         }
