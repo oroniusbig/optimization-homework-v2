@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class FireHazard : MonoBehaviour
 {
@@ -17,6 +13,8 @@ public class FireHazard : MonoBehaviour
     [SerializeField] private GameObject player;
     private PlayerCharacterController targetCharacterController;
 
+    const string playerTag = "PlayerCharacter";// Added a const string to hold the player tag.
+
     // public void SetScriptableData(FireHazardScriptableObject fireHazardScriptableObject)
     // {
     //     fireHazardData = fireHazardScriptableObject;
@@ -28,7 +26,7 @@ public class FireHazard : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerCharacter"))
+        if (other.gameObject.CompareTag(playerTag))
         {
             Debug.Log("Player entered this hazard");
             FireEnteredEventArgs fireEnteredEventArgs = new FireEnteredEventArgs
